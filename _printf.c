@@ -52,6 +52,12 @@ int _printf(const char *format, ...)
                 count++;
                 i++;
             }
+            else
+            {
+                _putchar(format[(i + 1)]);
+                count++;
+                i++;
+            }
         }
         else
         {
