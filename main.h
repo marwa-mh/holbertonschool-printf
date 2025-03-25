@@ -9,7 +9,7 @@ int get_string_count(va_list args);
 char extract_conversion(const char *format, int index);
 typedef struct format_type
 {
-    char type; // c ,s ,f
+    char type;
     int (*name)(va_list args);
 } format_type_t;
 

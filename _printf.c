@@ -2,6 +2,14 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+/**
+ * printf - Custom printf that produces output according to format
+ *
+ * @format: arguments to printf
+ *
+ * Return: Count of argument
+ */
+
 int _printf(const char *format, ...)
 {
     va_list args;
