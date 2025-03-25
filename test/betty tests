@@ -1,0 +1,75 @@
+[betty_code] Command to run:
+betty-style --allow-global-variables *.c *.h
+su student_jail -c 'timeout 30 bash -c '"'"'betty-style --allow-global-variables *.c *.h'"'"''
+[betty_code] Return code: 1
+[betty_code] Student stdout:
+_printf.c:15: WARNING: please, no spaces at the start of a line
+_printf.c:16: WARNING: please, no spaces at the start of a line
+_printf.c:17: WARNING: please, no spaces at the start of a line
+_printf.c:18: WARNING: please, no spaces at the start of a line
+_printf.c:20: WARNING: please, no spaces at the start of a line
+_printf.c:22: WARNING: please, no spaces at the start of a line
+_printf.c:23: WARNING: please, no spaces at the start of a line
+_printf.c:24: ERROR: code indent should use tabs where possible
+_printf.c:24: WARNING: please, no spaces at the start of a line
+_printf.c:24: WARNING: suspect code indent for conditional statements (8, 12)
+_printf.c:25: ERROR: code indent should use tabs where possible
+_printf.c:25: WARNING: please, no spaces at the start of a line
+
+_printf.c:26: ERROR: code indent should use tabs where possible
+_printf.c:26: WARNING: please, no spaces at the start of a line
+_printf.c:27: ERROR: code indent should use tabs where possible
+_printf.c:27: WARNING: please, no spaces at the start of a line
+_printf.c:28: ERROR: code indent should use tabs where possible
+_printf.c:28: WARNING: please, no spaces at the start of a line
+_printf.c:29: ERROR: code indent should use tabs where possible
+_printf.c:29: WARNING: please, no spaces at the start of a line
+_printf.c:30: ERROR: code indent should use tabs where possible
+_printf.c:30: WARNING: please, no spaces at the start of a line
+_printf.c:31: ERROR: code indent should use tabs where possible
+_printf.c:31: WARNING: please, no spaces at the start of a line
+_printf.c:32: ERROR: code indent should use tabs where possible
+_printf.c:32: WARNING: please, no spaces at the start of a line
+_printf.c:33: ERROR: code indent should use tabs where possible
+_printf.c:33: WARNING: Missing a blank line after declarations
+_printf.c:33: WARNING: please, no spaces at the start of a line
+_printf.c:34: ERROR: code indent should use tabs where possible
+
+
+
+_printf.c:34: WARNING: please, no spaces at the start of a line
+_printf.c:35: ERROR: code indent should use tabs where possible
+_printf.c:35: WARNING: please, no spaces at the start of a line
+_printf.c:36: ERROR: code indent should use tabs where possible
+_printf.c:36: WARNING: please, no spaces at the start of a line
+_printf.c:37: ERROR: code indent should use tabs where possible
+_printf.c:37: WARNING: please, no spaces at the start of a line
+_printf.c:38: ERROR: code indent should use tabs where possible
+_printf.c:38: WARNING: please, no spaces at the start of a line
+_printf.c:39: ERROR: code indent should use tabs where possible
+_printf.c:39: WARNING: please, no spaces at the start of a line
+_printf.c:40: ERROR: code indent should use tabs where possible
+_printf.c:40: WARNING: please, no spaces at the start of a line
+_printf.c:40: WARNING: suspect code indent for conditional statements (16, 20)
+_printf.c:41: ERROR: code indent should use tabs where possible
+_printf.c:41: WARNING: please, no spaces at the start of a line
+_printf.c:42: ERROR: code indent should use tabs where possible
+_printf.c:42: WARNING: please, no spaces at the start of a line
+_printf.c:42: WARNING: suspect code indent for conditional statements (16, 20)
+_printf.c:43: ERROR: code indent should use tabs where possible
+_printf.c:43: WARNING: please, no spaces at the start of a line
+_printf.c:44: ERROR: code indent should use tabs where possible
+_printf.c:44: WARNING: please, no spaces at the start of a line
+_printf.c:45: ERROR: code indent should use tabs where possible
+_printf.c:45: WARNING: please, no spaces at the start of a line
+_printf.c:46: ERROR: code indent should use tabs where possible
+_printf.c:46: WARNING: please, no spaces at the start of a line
+_printf.c:47: ERROR: code indent should use tabs where possible
+_printf.c:47: WARNING: please, no spaces at the start of a line
+_printf.c:48: ERROR: code indent should use tabs where possible
+_printf.c:48: WARNING: please, no spaces at the start of a line
+_printf.c:49: ERROR: code indent should use tabs wher
+...3683 more characters
+[betty_code] Student stdout length: 7683
+[betty_code] Student stderr:
+[betty_code] Student stderr length: 0
