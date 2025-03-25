@@ -1,14 +1,13 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
-#include "_putchar.c"
 
-int _printf(const char *format, ...){
+int _printf(const char *format, ...)
+{
     va_list args;
     int count = 0;
     int i, j;
     char *str;
-    char c;
 
     va_start(args, format);
 
@@ -25,7 +24,7 @@ int _printf(const char *format, ...){
             }
             else if (format[i + 1] == 's')
             {
-                *str = va_arg(args, char *);
+                str = va_arg(args, char *);
                 for (j = 0; str[j] != '\0'; j++)
                 {
                     _putchar(str[j]);
