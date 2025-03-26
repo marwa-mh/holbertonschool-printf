@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 					len += print_type[j].print(args);
 					break;
 				}
-			if (j == 2)
+			if (j == 5)
 			{
 				_putchar('%');
 				len = len + 1 + print_type[0].print(args);
