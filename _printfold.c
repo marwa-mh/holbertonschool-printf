@@ -9,14 +9,8 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int len = 0, i, j;
+	int count = 0, i, j;
 	char *str, c;
-	Print_Type_S print_type[] = {
-		{'c', print_char},
-		{'s', print_string},
-		{'%', print_char},
-		{'d', print_signed_integer},
-		{'i', print_int}};
 
 	va_start(args, format);
 	for (i = 0; format[i] != '\0'; i++)
@@ -25,26 +19,45 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-			for (j = 0; j < 5; j++)
-				if (print_type[j].type == format[i + 1])
+			if (format[i + 1] == 'c')
+			{
+				c = va_arg(args, int);
+				_putchar(c);
+				count++;
+				i++;
+			}
+			else if (format[i + 1] == 's')
+			{
+				str = va_arg(args, char *);
+				if (!str)
+					str = "(null)";
+				for (j = 0; str[j] != '\0'; j++)
 				{
-					len += print_type[j].print(args);
-					break;
+					_putchar(str[j]);
+					count++;
 				}
-			if (j == 2)
+				i++;
+			}
+			else if (format[i + 1] == '%')
 			{
 				_putchar('%');
-				len = len + 1 + print_type[0].print(args);
+				count++;
+				i++;
 			}
-			i++;
+			else
+			{
+				_putchar('%');
+				_putchar(format[(i + 1)]);
+				count += 2;
+				i++;
+			}
 		}
 		else
 		{
 			_putchar(format[i]);
-			len++;
+			count++;
 		}
 	}
 	va_end(args);
-	return (len);
+	return (count);
 }
-
