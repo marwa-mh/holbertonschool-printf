@@ -47,6 +47,7 @@ int print_string(va_list args)
 	{
 		_putchar(*str);
 		len++;
+		str++;
 	}
 	return (len);
 }
