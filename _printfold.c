@@ -6,7 +6,7 @@
  * @format: arguments to printf
  * Return: Count of argument
  */
-int _printf(const char *format, ...)
+int _printfold(const char *format, ...)
 {
 	va_list args;
 	int count = 0, i, j;
