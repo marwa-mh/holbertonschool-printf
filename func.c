@@ -6,6 +6,11 @@ int print_char(va_list args)
 	_putchar(c);
 	return (1);
 }
+int print_percent(va_list args)
+{
+       	_putchar('%');
+	return (1);
+}
 int print_signed_integer(va_list args)
 {
 	int c = va_arg(args, int);
