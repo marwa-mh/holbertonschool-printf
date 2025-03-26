@@ -6,16 +6,19 @@
  * @format: arguments to printf
  * Return: Count of argument
  */
-int _printf(const char *format, ...)
+int _printfo(const char *format, ...)
 {
 	va_list args;
 	int len = 0, i, j;
 	Print_Type_S print_type[] = {
 		{'c', print_char},
-		{'s', print_string}};
+		{'s', print_string},
+		{'d', print_signed_integer},
+		{'i', print_int}};
 
 	va_start(args, format);
 	for (i = 0; format[i] != '\0'; i++)
+	{
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
@@ -43,6 +46,7 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			len++;
 		}
+	}
 	va_end(args);
 	return (len);
 }

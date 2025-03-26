@@ -23,6 +23,7 @@ int print_int(va_list args)
 int print_number(int n)
 {
 	int len = 0;
+
 	if (n < 0)
 	{
 		_putchar('-');
@@ -42,6 +43,7 @@ int print_string(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int len = 0;
+
 	if (!str)
 		str = "(null)";
 	while (*str != '\0')
