@@ -13,7 +13,6 @@ int _printf(const char *format, ...)
 	Print_Type_S print_type[] = {
 		{'c', print_char},
 		{'s', print_string},
-		{'%', print_char},
 		{'d', print_signed_integer},
 		{'i', print_int}};
 
@@ -24,16 +23,21 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-			for (j = 0; j < 5; j++)
+			for (j = 0; j < 4; j++)
 				if (print_type[j].type == format[i + 1])
 				{
 					len += print_type[j].print(args);
 					break;
 				}
-			if (j == 5)
+			if (j == 4)
 			{
 				_putchar('%');
-				len = len + 1 + print_type[0].print(args);
+				len++;
+				if (format[i + 1] != '%')
+				{
+					_putchar(format[i + 1]);
+					len++;
+				}
 			}
 			i++;
 		}
