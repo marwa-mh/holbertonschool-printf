@@ -10,7 +10,6 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int len = 0, i, j;
-	char *str, c;
 	Print_Type_S print_type[] = {
 		{'c', print_char},
 		{'s', print_string},

@@ -8,7 +8,6 @@ int print_char(va_list args)
 }
 int print_signed_integer(va_list args)
 {
-	int len = 0;
 	int c = va_arg(args, int);
 
 	return (print_number(c));
