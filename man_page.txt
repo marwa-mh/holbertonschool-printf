@@ -18,6 +18,7 @@ HOW IT WORKS
     2. When it finds a %, it looks at the next character to determine the data type to print.
     3. It retrieves the corresponding argument and prints it.
     4. `_printf` continues reading the rest of the format string and printing arguments until the end of the string.
+
 HOW TO USE IT
     Call Function:
       _printf("Hello, %s", "world")
