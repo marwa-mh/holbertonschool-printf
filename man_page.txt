@@ -1,0 +1,80 @@
+_printf - Manual Page
+
+NAME
+    _printf
+
+FUNCTION PROTOTYPE
+    int _printf(const char *format, ...);
+  Parameters
+    format: A string containing text and format specifiers.
+    variadic function: The variable number of arguments that the user wants to print. The arguments replace the format specifiers in the string.
+
+DESCRIPTION
+    A simple version of the printf function that prints formatted text to the screen.
+    It prints text and numbers by using special placeholders known as format specifiers.
+
+HOW IT WORKS
+    1. _printf function reads the format string one character at a time.
+    2. When it finds a %, it looks at the next character to determine the data type to print.
+    3. It retrieves the corresponding argument and prints it.
+
+HOW TO USE IT
+    Call Function:
+      _printf("Hello, %s", "world")
+    Prints:
+      Hello, world
+
+    Printing Multiple Values:
+      Arguments are separated by a single comma and space respectively.
+      _printf("My name is %s, and I am %d old", "Sarah", 18)
+
+FORMAT SPECIFIER
+    A placeholder within a string that is used to define how a specific type of data should be displayed.
+
+    The format specifier begins with a % symbol, followed by a character that indicates the data type.
+
+    %c: Prints a single character.
+      Example:
+        _printf("My name starts with: %c", 'A');
+      Output:
+        My name starts with A.
+
+    %s: Prints a string.
+      Example:
+        _printf("My name is %s.", "Sarah");
+      Output:
+        My name is Sarah.
+
+    %d: Prints signed integers (whole numbers). Only matches to decimal.
+      Example:
+        _printf("I am %d years old.", 18);
+      Output:
+        I am 18 years old.
+
+    %i: Prints signed integers. Matches to decimal, hexadecimal and octal.
+      Example:
+        _printf("I am %i years old.", 0x12);
+      Output:
+        I am 18 years old.
+
+    %%: Prints a percent sign (%).
+      Example:
+        _printf("50%% off!");
+      Output:
+        50% off!
+
+RETURN VALUE
+    The function returns the number of characters printed.
+    If there's an error (such as invalid format specifier), the function returns -1.
+
+ERRORS
+    If % is the last character of the format string, _printf returns -1.
+    If the function encounters an invalid format specifier, it will print % followed by the character.
+      Example:
+        _printf("hello:[%r]");
+      Output:
+        hello:[%r]
+
+
+SEE ALSO
+    printf(3): https://man7.org/linux/man-pages/man3/fprintf.3.html#NAME - For more information on the standard printf function.
