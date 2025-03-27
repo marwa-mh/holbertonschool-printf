@@ -7,17 +7,17 @@ FUNCTION PROTOTYPE
     int _printf(const char *format, ...);
   Parameters
     format: A string containing text and format specifiers.
-    variadic function: The variable number of arguments that the user wants to print. The arguments replace the format specifiers in the string.
+    variadic function: A variable number of arguments that replace the format specifiers in the format string.
 
 DESCRIPTION
-    A simple version of the printf function that prints formatted text to the screen.
+    A simplified version of the `printf` function that prints formatted text to the standard output.
     It prints text and numbers by using special placeholders known as format specifiers.
 
 HOW IT WORKS
     1. _printf function reads the format string one character at a time.
     2. When it finds a %, it looks at the next character to determine the data type to print.
     3. It retrieves the corresponding argument and prints it.
-
+    4. `_printf` continues reading the rest of the format string and printing arguments until the end of the string.
 HOW TO USE IT
     Call Function:
       _printf("Hello, %s", "world")
