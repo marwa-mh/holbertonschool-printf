@@ -76,6 +76,5 @@ ERRORS
       Output:
         hello:[%r]
 
-
 SEE ALSO
     printf(3): https://man7.org/linux/man-pages/man3/fprintf.3.html#NAME - For more information on the standard printf function.
