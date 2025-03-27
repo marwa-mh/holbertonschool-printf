@@ -14,7 +14,7 @@ DESCRIPTION
     It prints text and numbers by using special placeholders known as format specifiers.
 
 HOW IT WORKS
-    1. _printf function reads the format string one character at a time.
+    1. `_printf` function reads the format string one character at a time.
     2. When it finds a %, it looks at the next character to determine the data type to print.
     3. It retrieves the corresponding argument and prints it.
     4. `_printf` continues reading the rest of the format string and printing arguments until the end of the string.
@@ -27,7 +27,10 @@ HOW TO USE IT
 
     Printing Multiple Values:
       Arguments are separated by a single comma and space respectively.
-      _printf("My name is %s, and I am %d old", "Sarah", 18)
+      Example:
+        _printf("My name is %s, and I am %d years old.", "Sarah", 18)
+      Output:
+        My name is Sarah, and I am 18 years old.
 
 FORMAT SPECIFIER
     A placeholder within a string that is used to define how a specific type of data should be displayed.
