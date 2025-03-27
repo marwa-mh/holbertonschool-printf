@@ -9,6 +9,8 @@ int print_string(va_list args);
 int print_signed_integer(va_list args);
 int print_int(va_list args);
 int print_number(int n);
+int print_neg_number(int n);
+int print_neg_number(int n);
 /**
  * struct Print_Type - Structure to map a character type to a function pointer
  * @type:the type specifier (e.g., 'c', 's' for string)

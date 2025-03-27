@@ -32,7 +32,7 @@ int print_int(va_list args)
 {
 	int len = 0;
 
-	len = 1 + print_number(va_arg(args, int));
+	len =  print_number(va_arg(args, int));
 	return (len);
 }
 /**
@@ -47,12 +47,34 @@ int print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		len++;
-		n = n * -1;
+		len = print_neg_number(n);
 	}
+	else
+	{
+		len = print_pos__number(n);
+	}
+	return (len);
+}
+int print_neg_number(int n)
+{
+	int len = 1;
+
+	if (n / 10 < 0)
+	{
+		len = print_neg_number(n / 10);
+		_putchar(((n % 10) * -1) + '0');
+	}
+	else
+		_putchar(-1 * n + '0');
+	return (len + 1);
+}
+int print_pos_number(int n)
+{
+	int len = 0;
+
 	if (n / 10 > 0)
 	{
-		len += print_number(n / 10);
+		len = print_pos_number(n / 10);
 		_putchar((n % 10) + '0');
 	}
 	else
