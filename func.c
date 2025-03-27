@@ -51,7 +51,7 @@ int print_number(int n)
 	}
 	else
 	{
-		len = print_pos__number(n);
+		len = print_pos_number(n);
 	}
 	return (len);
 }
